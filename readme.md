@@ -1,0 +1,85 @@
+# Setup Instructions
+
+## Requirements
+
+* **Python 3.10+** (3.12 recommended)
+
+## 1) Clone or Prepare the Repo
+```bash
+git clone https://github.com/sebastian-landl-gofore/rag-playground.git
+```
+
+## 2) Install dependencies
+```bash
+cd meetup-ai-playground
+```
+
+### Set up either a venv or an anaconda environment
+
+#### venv
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+```
+
+#### anaconda (needs to be [installed](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) first, I recommend miniconda)
+```bash
+conda create -n rag-playground python=3.12
+conda activate rag-playground
+```
+
+### Finally the actual dependency installation
+```bash
+pip install -r requirements.txt
+```
+
+## 3) Ollama (Local Option)
+
+1. Install Ollama and run
+   * **macOS**:
+
+     ```bash
+     brew install ollama
+     ```
+   * **Linux/Windows/macOS**: Use the [installer from Ollama’s website](https://ollama.com/download)
+
+2. Run the local ollama server (if not started automatically by the installer):
+   ```bash
+     ollama serve
+     ```
+
+2. Pull a model:
+   ```bash
+   ollama pull gemma3n:e4b
+   ```
+
+   What model should I pull?
+   Models come in different sizes. The bigger they are the more RAM (or VRAM) they need and they often also require more compute. Models have a namne and size which in the ollama context is specified like this: _name:size_. A small starting point could be [gemma3n:e4b](https://ollama.com/library/gemma3n). If you have more (or less) power to spare, you may try an appropriately sized version of [gemma3](https://ollama.com/library/gemma3) or [mistral-small:24b](https://ollama.com/library/mistral-small3.2). Regarding size: you need to have enough memory to accomodate the model itself and you need some reserves for the context on top. Ultimately this depends on the context size you specify, but calculate a couple of GB to get started.
+
+3. List pulled models:
+   ```bash
+   ollama list
+   ```
+
+3. Have a quick chat:
+   ```bash
+   ollama run gemma3n:e4b
+   ```
+
+## 4) OpenAI‑Compatible API (Cloud Option)
+
+An alternative to local: use any **OpenAI‑compatible endpoint**, such as **OpenAI**, **Gemini** (notably offers a [generous free tier](https://ai.google.dev/gemini-api/docs/rate-limits)) or **OpenRouter**.
+
+Create a `.env` file in the project folder:
+
+```env
+OPENAI_API_KEY=sk-...
+# Optionally, if using Gemini or another proxy:
+# OPENAI_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
+```
+
+## 5) Run it
+Configure your client and model in the `main.py` in the code and run it:
+```bash
+python main.py
+```
