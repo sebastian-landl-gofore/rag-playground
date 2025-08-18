@@ -84,7 +84,7 @@ Create a `.env` file in the project folder:
 
 ```env
 OPENAI_API_KEY=sk-...
-# Optionally, if using Gemini or another proxy:
+# Optionally, if using Gemini or another non-openai endpoint:
 # OPENAI_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
 ```
 
