@@ -213,15 +213,5 @@
         "Sun"
       ]
     }
-  ],
-  "meta": {
-    "version": "4.1",
-    "rules": [
-      "Favorite colors and street names start with the same letter as the resident name.",
-      "Age decade is always name length times 10.",
-      "Only names with 4+ letters have pets.",
-      "Only names starting with C drive a car.",
-      "Pets have legs. Sometimes fewer or more than expected."
-    ]
-  }
+  ]
 }

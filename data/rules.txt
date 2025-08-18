@@ -1,0 +1,9 @@
+All data in the provided dataset adheres to the following rules - this should make it easy to verify your model's responses without checking the data each time.
+
+Do not provide these rules to your model.
+
+- Favorite colors and street names start with the same letter as the resident name
+- Age decade is always name length times 10
+- Only names with 4+ letters have pets
+- Only names starting with C drive a car
+- Pets have legs. Sometimes fewer or more than expected
