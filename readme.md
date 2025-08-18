@@ -1,9 +1,5 @@
 # Setup Instructions
 
-## Requirements
-
-* **Python 3.10+** (3.12 recommended)
-
 ## 1) Clone or Prepare the Repo
 ```bash
 git clone https://github.com/sebastian-landl-gofore/rag-playground.git
@@ -11,21 +7,35 @@ git clone https://github.com/sebastian-landl-gofore/rag-playground.git
 
 ## 2) Install dependencies
 ```bash
-cd meetup-ai-playground
+cd <your-cloned-repo-directory>
 ```
 
-### Set up either a venv or an anaconda environment
+### Environment Setup
 
-#### venv
+#### Recommended Fast Track (anaconda)
+
+Install miniconda (recommended) or [anaconda](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions),
+
+e.g. homebrew/mac
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+brew install --cask miniconda
 ```
 
-#### anaconda (needs to be [installed](https://www.anaconda.com/docs/getting-started/miniconda/install#quickstart-install-instructions) first, I recommend miniconda)
 ```bash
 conda create -n rag-playground python=3.12
+conda init <bash/zsh/...(your shell)>
 conda activate rag-playground
+```
+### Alternatively, set up manually
+
+### Install python 3 (3.12 recommended)
+
+https://www.python.org/downloads/
+
+### set up venv
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 ```
 
 ### Finally the actual dependency installation
@@ -54,7 +64,7 @@ pip install -r requirements.txt
    ```
 
    What model should I pull?
-   Models come in different sizes. The bigger they are the more RAM (or VRAM) they need and they often also require more compute. Models have a namne and size which in the ollama context is specified like this: _name:size_. A small starting point could be [gemma3n:e4b](https://ollama.com/library/gemma3n). If you have more (or less) power to spare, you may try an appropriately sized version of [gemma3](https://ollama.com/library/gemma3) or [mistral-small:24b](https://ollama.com/library/mistral-small3.2). Regarding size: you need to have enough memory to accomodate the model itself and you need some reserves for the context on top. Ultimately this depends on the context size you specify, but calculate a couple of GB to get started.
+   Models come in different sizes. The bigger they are the more RAM (or VRAM) they need and they often also require more compute. Models have a name and size which in the ollama context is specified like this: _name:size_. A small starting point could be [gemma3n:e4b](https://ollama.com/library/gemma3n). If you have more (or less) power to spare, you may try an appropriately sized version of [gemma3](https://ollama.com/library/gemma3) or [mistral-small:24b](https://ollama.com/library/mistral-small3.2). Regarding size: you need to have enough memory to accomodate the model itself and you need some reserves for the context on top. Ultimately this depends on the context size you specify, but calculate a couple of GB to get started.
 
 3. List pulled models:
    ```bash
