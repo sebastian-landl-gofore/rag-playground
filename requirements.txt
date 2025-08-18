@@ -1,3 +1,5 @@
+chromadb
 ollama
 openai
 python-dotenv
+tiktoken
