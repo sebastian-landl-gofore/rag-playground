@@ -1,0 +1,227 @@
+{
+  "town": "RaggyTown",
+  "residents": [
+    {
+      "name": "Alice",
+      "age": 52,
+      "favorite_color": "Amber",
+      "street": "101 Apple Street",
+      "pet": {
+        "name": "Milo",
+        "species": "Cat",
+        "legs":4
+      },
+      "car_brand": null
+    },
+    {
+      "name": "Bob",
+      "age": 34,
+      "favorite_color": "Blue",
+      "street": "102 Banana Boulevard",
+      "pet": null,
+      "car_brand": null
+    },
+    {
+      "name": "Cara",
+      "age": 40,
+      "favorite_color": "Coral",
+      "street": "103 Cherry Street",
+      "pet": {
+        "name": "Bubbles",
+        "species": "Fish",
+        "legs": 0
+      },
+      "car_brand": "Chevrolet"
+    },
+    {
+      "name": "Dan",
+      "age": 35,
+      "favorite_color": "Dandelion",
+      "street": "104 Date Drive",
+      "pet": null,
+      "car_brand": null
+    },
+    {
+      "name": "Eva",
+      "age": 38,
+      "favorite_color": "Emerald",
+      "street": "105 Elderberry Esplanade",
+      "pet": null,
+      "car_brand": null
+    },
+    {
+      "name": "Chris",
+      "age": 55,
+      "favorite_color": "Cyan",
+      "street": "106 Clementine Court",
+      "pet": {
+        "name": "Poppy",
+        "species": "Parrot",
+        "legs": 2
+      },
+      "car_brand": "Chrysler"
+    },
+    {
+      "name": "Clara",
+      "age": 51,
+      "favorite_color": "Crimson",
+      "street": "107 Cranberry Crescent",
+      "pet": {
+        "name": "Noodle",
+        "species": "Cat",
+        "legs": 4
+      },
+      "car_brand": "Citroën"
+    },
+    {
+      "name": "Cody",
+      "age": 46,
+      "favorite_color": "Cerulean",
+      "street": "108 Currant Circle",
+      "pet": {
+        "name": "Spidey",
+        "species": "Turtle",
+        "legs": 8
+      },
+      "car_brand": "Cadillac"
+    },
+    {
+      "name": "Fiona",
+      "age": 58,
+      "favorite_color": "Fuchsia",
+      "street": "109 Fig Lane",
+      "pet": {
+        "name": "Whiskers",
+        "species": "Cat",
+        "legs": 4
+      },
+      "car_brand": null
+    },
+    {
+      "name": "Greg",
+      "age": 43,
+      "favorite_color": "Green",
+      "street": "110 Grape Grove",
+      "pet": {
+        "name": "Sparky",
+        "species": "Dog",
+        "legs": 4
+      },
+      "car_brand": null
+    },
+    {
+      "name": "Liam",
+      "age": 41,
+      "favorite_color": "Lilac",
+      "street": "111 Lemon Lane",
+      "pet": {
+        "name": "Legless Larry",
+        "species": "Dog",
+        "legs": 1
+      },
+      "car_brand": null
+    },
+    {
+      "name": "Ivy",
+      "age": 33,
+      "favorite_color": "Ivory",
+      "street": "112 Imbe Avenue",
+      "pet": null,
+      "car_brand": null
+    },
+    {
+      "name": "Zoe",
+      "age": 30,
+      "favorite_color": "Zaffre",
+      "street": "113 Zucchini Way",
+      "pet": null,
+      "car_brand": null
+    },
+    {
+      "name": "Ed",
+      "age": 22,
+      "favorite_color": "Eggplant",
+      "street": "113 Eggplant Way",
+      "pet": null,
+      "car_brand": null
+    }
+  ],
+  "shops": [
+    {
+      "name": "Grocery Guild",
+      "open_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    {
+      "name": "Hardware Haven",
+      "open_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ]
+    },
+    {
+      "name": "Pet Place",
+      "open_days": [
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    {
+      "name": "Silver Screen Cinema",
+      "open_days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    {
+      "name": "Car Wash Corner",
+      "open_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    {
+      "name": "Coffeehouse Commons",
+      "open_days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    }
+  ],
+  "meta": {
+    "version": "4.1",
+    "rules": [
+      "Favorite colors and street names start with the same letter as the resident name.",
+      "Age decade is always name length times 10.",
+      "Only names with 4+ letters have pets.",
+      "Only names starting with C drive a car.",
+      "Pets have legs. Sometimes fewer or more than expected."
+    ]
+  }
+}
