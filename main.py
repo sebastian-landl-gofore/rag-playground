@@ -4,6 +4,8 @@ import ollama
 from dotenv import load_dotenv
 from typing import List, Optional
 
+from utils import token_count
+
 load_dotenv()
 
 class OllamaClient():
@@ -23,6 +25,11 @@ class OllamaClient():
             options=options,
         )
         return response.message.content
+    
+    def get_embedding(self, model: str, text: str) -> List[float]:
+        # https://ollama.com/blog/embedding-models
+        response = self.client.embed(model=model, input=text)
+        return response["embeddings"][0]
 
 class OpenAIClient():
     def __init__(self):
@@ -38,14 +45,19 @@ class OpenAIClient():
             temperature=temperature,
         )
         return response.choices[0].message.content
-
+    
+    def get_embedding(self, model: str, text: str) -> List[float]:
+        # https://platform.openai.com/docs/guides/embeddings
+        response = self.client.embeddings.create(input=[text], model=model)
+        return response.data[0].embedding
 
 def main():
     ollama_client = OllamaClient()
     #openai_client = OpenAIClient()
     messages = [{"role": "system", "content": "You are a helpful AI Assistant at a meetup exploring how RAG can augment LLM responses. This is an event where people can freely experiment with augemnting your responses."}]
     context_size = 2048
-    model = "gemma3n:e4b" # gpt-5, gemini-2.5-flash, mistral-small3.2:24b, gemma3:27b, gemma3n:e4b, ...
+    model = "gemma3n:e4b" # gpt-5, gemini-2.5-flash, mistral-small3.2:24b, gemma3:27b, ...
+    embedding_model = "bge-m3:latest" # text-embedding-3-small, gemini-embedding-001, ...
     print(f"Chatting with {model}. Type 'exit' to quit.\n")
 
     while True:
