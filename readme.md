@@ -72,6 +72,15 @@ pip install -r requirements.txt
    ollama pull bge-m3:latest
    ```
 
+   If you want smaller models some options are:
+   ```bash
+   ollama pull gemma3:4b
+   ```
+   and for embeddings:
+   ```bash
+   ollama pull nomic-embed-text
+   ```
+
 3. List pulled models:
    ```bash
    ollama list
