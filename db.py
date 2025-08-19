@@ -7,8 +7,13 @@ def get_chroma_client(path: Optional[str] = None):
     else:
         return chromadb.EphemeralClient()
 
-def get_or_create_collection(client, name: str):
-    return client.get_or_create_collection(name=name)
+def get_or_create_collection(client, name: str, similarity_metric: str = "cosine"):
+    return client.get_or_create_collection(
+        name=name,
+        metadata={
+            "hnsw:space": similarity_metric,
+        }
+    )
 
 def add_document(
     collection,
