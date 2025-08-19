@@ -24,6 +24,7 @@ brew install --cask miniconda
 ```bash
 conda create -n rag-playground python=3.12
 conda init <bash/zsh/...(your shell)>
+# You may also need to source your .<your shell>rc: source .<your shell>rc
 conda activate rag-playground
 ```
 ### Alternatively, set up manually
