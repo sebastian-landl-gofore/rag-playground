@@ -66,6 +66,11 @@ pip install -r requirements.txt
    What model should I pull?
    Models come in different sizes. The bigger they are the more RAM (or VRAM) they need and they often also require more compute. Models have a name and size which in the ollama context is specified like this: _name:size_. A small starting point could be [gemma3n:e4b](https://ollama.com/library/gemma3n). If you have more (or less) power to spare, you may try an appropriately sized version of [gemma3](https://ollama.com/library/gemma3) or [mistral-small:24b](https://ollama.com/library/mistral-small3.2). Regarding size: you need to have enough memory to accomodate the model itself and you need some reserves for the context on top. Ultimately this depends on the context size you specify, but calculate a couple of GB to get started.
 
+   If you go the local ollama route, best also pull an embedding model (we'll get to that):
+   ```bash
+   ollama pull bge-m3:latest
+   ```
+
 3. List pulled models:
    ```bash
    ollama list

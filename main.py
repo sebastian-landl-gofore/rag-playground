@@ -4,7 +4,8 @@ import ollama
 from dotenv import load_dotenv
 from typing import List, Optional
 
-from utils import token_count
+from vector_db import *
+from utils import *
 
 load_dotenv()
 
