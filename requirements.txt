@@ -2,4 +2,5 @@ chromadb
 ollama
 openai
 python-dotenv
+scikit-learn
 tiktoken
